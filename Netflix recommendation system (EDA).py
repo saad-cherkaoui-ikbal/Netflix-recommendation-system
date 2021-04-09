@@ -43,7 +43,7 @@ from collections import Counter
 def count(data, column) :
     return Counter([thing.strip() for thing in data[column].fillna('missing') for thing in thing.split(',')])
 
-actor_count = count(data, 'cast') # the occurrence of each individual genre actor in the dataset
+actor_count = count(data, 'cast') # the occurrence of each individual actor in the dataset
 country_count = count(data, 'country') # the occurrence of each individual country in the dataset
 genre_count = count(data, 'listed_in') # the occurrence of each individual genre in the dataset
 
